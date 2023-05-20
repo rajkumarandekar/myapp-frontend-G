@@ -1,0 +1,101 @@
+/* UserList.css */
+
+.table-container {
+    margin-top: 20px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+
+  .edit-form {
+    display: flex;
+    align-items: center;
+  }
+
+  .edit-form input,
+  .edit-form select {
+    margin-right: 10px;
+  }
+
+  .edit-form button {
+    margin-right: 5px;
+  }
+
+  .table-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    margin-top: 20px;
+  }
+
+  input,
+  select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: green;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: lightcoral;
+  }
+
+   
+
+  @media only screen and (max-width: 600px) {
+    .table-container {
+      padding: 10px;
+    }
+
+    form {
+      grid-template-columns: 1fr;
+    }
+
+  }
+
+  @media only screen and (max-width: 400px) {
+    input,
+    select {
+      font-size: 12px;
+    }
+
+  }

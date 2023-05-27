@@ -12,6 +12,7 @@ const UserList = () => {
     status: "",
   });
   const [showAddForm, setShowAddForm] = useState(false);
+  const [loading, setLoading] = useState(true); // Add loading state
 
   useEffect(() => {
     fetchUsers();
@@ -23,11 +24,19 @@ const UserList = () => {
         `https://backend-goldstone.onrender.com/api/users`
       );
       setUsers(response.data);
+      setLoading(false);
     } catch (error) {
       console.error("Error fetching users:", error);
     }
   };
 
+  if (loading) {
+    return (
+      <div className="load">
+        Loading...please wait fetching data onrender slow
+      </div>
+    );
+  }
   const toEdit = (user) => {
     setEditUser(user);
     setFormData({

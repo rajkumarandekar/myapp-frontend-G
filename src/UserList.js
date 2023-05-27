@@ -229,7 +229,7 @@ const UserList = () => {
   const fetchUsers = async () => {
     try {
       const response = await axios.get(
-        `https://backend-goldstone.onrender.com/api/users`
+        `https://profound-boba-5c01cd.netlify.app/api/users`
       );
       setUsers(response.data);
     } catch (error) {
@@ -254,7 +254,7 @@ const UserList = () => {
   const toUpdate = async () => {
     try {
       await axios.put(
-        `https://backend-goldstone.onrender.com/api/users/${editUser.id}`,
+        `https://profound-boba-5c01cd.netlify.app/api/users/${editUser.id}`,
         formData
       );
       setEditUser(null);
@@ -273,7 +273,7 @@ const UserList = () => {
   const toDelete = async (id) => {
     try {
       await axios.delete(
-        `https://backend-goldstone.onrender.com/api/users/${id}`
+        `https://profound-boba-5c01cd.netlify.app/api/users/${id}`
       );
       fetchUsers();
     } catch (error) {
@@ -284,7 +284,7 @@ const UserList = () => {
   const toAdd = async () => {
     try {
       const res = await axios.post(
-        `https://backend-goldstone.onrender.com/api/users`,
+        `https://profound-boba-5c01cd.netlify.app/api/users`,
         formData
       );
       const newUser = res.data;
@@ -316,7 +316,7 @@ const UserList = () => {
   const toExport = async () => {
     try {
       await axios.get(
-        `https://backend-goldstone.onrender.com/api/export-users`
+        `https://profound-boba-5c01cd.netlify.app/api/export-users`
       );
       alert("Export to CSV successful!");
     } catch (error) {

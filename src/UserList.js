@@ -4,7 +4,6 @@ import "./UserList.css";
 
 const UserList = () => {
   const [users, setUsers] = useState([]);
-  const [loading, setLoading] = useState(false);
   const [editUser, setEditUser] = useState(null);
   const [formData, setFormData] = useState({
     name: "",
@@ -24,18 +23,10 @@ const UserList = () => {
         `https://backend-goldstone.onrender.com/api/users`
       );
       setUsers(response.data);
-      setLoading(true);
     } catch (error) {
       console.error("Error fetching users:", error);
     }
   };
-  if (!loading) {
-    return (
-      <div className="load">
-        Loading...please wait fetching data onrender slow
-      </div>
-    );
-  }
 
   const toEdit = (user) => {
     setEditUser(user);

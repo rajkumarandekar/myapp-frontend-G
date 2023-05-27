@@ -29,7 +29,7 @@ const UserList = () => {
       console.error("Error fetching users:", error);
     }
   };
-  if (loading) {
+  if (!loading) {
     return (
       <div className="load">
         Loading...please wait fetching data onrender slow

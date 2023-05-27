@@ -18,7 +18,9 @@ const UserList = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/users");
+      const response = await axios.get(
+        "https://backend-goldstone.onrender.com/api/users"
+      );
       setUsers(response.data);
     } catch (error) {
       console.error("Error fetching users:", error);
@@ -42,7 +44,7 @@ const UserList = () => {
   const toUpdate = async () => {
     try {
       await axios.put(
-        `http://localhost:3000/api/users/${editUser.id}`,
+        `https://backend-goldstone.onrender.com/api/users/${editUser.id}`,
         formData
       );
       setEditUser(null);
@@ -69,7 +71,9 @@ const UserList = () => {
   };
   const handleExport = async () => {
     try {
-      await axios.get("http://localhost:3000/api/export-users");
+      await axios.get(
+        "https://backend-goldstone.onrender.com/api/export-users"
+      );
     } catch (error) {
       console.error("Error exporting users:", error);
     }

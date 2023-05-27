@@ -4,7 +4,7 @@ import "./UserList.css";
 
 const UserList = () => {
   const [users, setUsers] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [editUser, setEditUser] = useState(null);
   const [formData, setFormData] = useState({
     name: "",
@@ -30,7 +30,11 @@ const UserList = () => {
     }
   };
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="load">
+        Loading...please wait fetching data onrender slow
+      </div>
+    );
   }
 
   const toEdit = (user) => {
